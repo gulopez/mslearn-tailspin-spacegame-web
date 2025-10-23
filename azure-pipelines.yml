@@ -40,4 +40,14 @@ steps:
     publishLocation: 'pipeline'
   condition: succeededOrFailed()
 
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: '8b600a34-d048-431c-8288-7f59b25f132f/def829a5-7a53-486f-bb18-41f069c9b14c'
+    vstsFeedPackagePublish: 'releasegustest'
+    versionOption: 'patch'
+
+
   
