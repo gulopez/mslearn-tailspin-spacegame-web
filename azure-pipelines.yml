@@ -22,3 +22,5 @@ steps:
     artifact: spacegame-web
     publishLocation: 'pipeline'
   condition: succeededOrFailed()
+
+  
