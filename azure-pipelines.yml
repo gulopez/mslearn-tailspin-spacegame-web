@@ -16,6 +16,14 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+
+# Compress build output into a zip file
+- script: |
+    echo "Compressing build output..."
+    zip -r Tailspin.SpaceGame.Web.zip Tailspin.SpaceGame.Web
+  displayName: 'Create ZIP of build output'
+
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: Tailspin.SpaceGame.Web
