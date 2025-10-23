@@ -15,3 +15,10 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: spacegame-web
+    artifact: spacegame-web
+    publishLocation: 'pipeline'
+  condition: succeededOrFailed()
