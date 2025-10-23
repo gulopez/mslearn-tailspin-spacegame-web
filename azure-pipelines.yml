@@ -18,8 +18,8 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: spacegame-web
-    artifact: spacegame-web
+    targetPath: Tailspin.SpaceGame.Web
+    artifact: Tailspin.SpaceGame.Web
     publishLocation: 'pipeline'
   condition: succeededOrFailed()
 
