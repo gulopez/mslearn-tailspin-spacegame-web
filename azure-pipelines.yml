@@ -36,7 +36,7 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: $(Pipeline.Workspace)
-    artifact: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    artifact: SpaceGame-Web
     publishLocation: 'pipeline'
   condition: succeededOrFailed()
 
